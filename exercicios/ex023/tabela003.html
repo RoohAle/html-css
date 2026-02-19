@@ -15,33 +15,50 @@
             padding: 10px;
             text-align: center;
         }
+
+        col.cnome{
+            background-color: yellow;
+        }
+        col.cidade{
+            background-color: red;
+        }
+        div#container{
+            overflow-x: auto; /*aqui fica barra de rolagem apenas na tabela, o conteudo se ajusta a tela, deve colocar a tabela numa div*/
+        }
     </style>
 </head>
 <body>
-    <h1>Mesclagem</h1>
+    <h1>Mesclagem e responsividade</h1>
 
-    <table>
-        <tr>
-            <td>A</td>
-            <td colspan="2">B</td> <!-- colspan serve para expandir em colunas-->
-           
-        </tr>
-        <tr>
-            <td rowspan="2">x</td><!-- rowspan serve para expandir em linhas.. OBS: SCOPE é rowgroup, pois nessa celula vai passar mais linhas com informaçoes relativas a esta linha, se fosse colunas com varias colunas o SCOPE seria colgroup... serve para a pesquisa no google--> 
-            <td>E</td>
-            <td rowspan="3">F</td>
-        </tr>
-        <tr>
-            
-            <td>H</td>
-           
-        </tr>
-        <tr>
-            
-            <td>L</td>
-            <td>M</td>
-        </tr>
-    </table>
+    <div id="container">
+        <table>
+            <colgroup> <!-- com essa tag, consigo colocar configurações em grupos de linhas na mesma coluna-->
+                <col class="cnome">
+                <col class="cidade"> <!-- posso colocar span="5" o que significa que as proximas 5 colunas terão essas configurações-->
+        
+            </colgroup>
+            <tr>
+                <td>A</td>
+                <td colspan="2">B</td> <!-- colspan serve para expandir em colunas-->
+        
+            </tr>
+            <tr>
+                <td rowspan="2">x</td><!-- rowspan serve para expandir em linhas.. OBS: SCOPE é rowgroup, pois nessa celula vai passar mais linhas com informaçoes relativas a esta linha, se fosse colunas com varias colunas o SCOPE seria colgroup... serve para a pesquisa no google-->
+                <td>E</td>
+                <td rowspan="3">F</td>
+            </tr>
+            <tr>
+        
+                <td>H</td>
+        
+            </tr>
+            <tr>
+        
+                <td>L</td>
+                <td>M</td>
+            </tr>
+        </table>
+    </div>
     
 </body>
 </html>
