@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uso de tabelas grandes</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        table{
+            width: 500px;
+            border-collapse: collapse;
+            position: relative; /*para colocar o cabeçalho fixo */
+        }
+        caption{
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: rgba(65, 62, 62, 0.692);
+        }
+        td, th{
+            border: 1px solid black;
+            padding: 10px;
+        }
+        
+        thead, tfoot{
+            background-color: rgb(66, 61, 61);
+            color: white;
+        }
+        thead > tr > th {
+            position: sticky; /* colavel*/
+            top: -1px; /*cola na parte 0 da pagina, fica bem encaixado com -1*/
+            background-color: rgb(66, 61, 61);
+        }
+        tbody > tr:nth-child(2n){ /* esse comando para deixa zebrada a tabela, o 2n vc coloca qtos quiser o intervalo... ou odd para os impares.. ou even para numero par, com base na localização da linha da tabela*/
+            background-color: lightcyan;
+        }
+        
+        td.num{
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <h1>Uso de tabelas grandes</h1>
+    <!-- Anatoomia para tabelas grandes
+     Table
+        Caption (como se fosse uma legenda para a tabela)
+        Thead
+        TR, TD, TH
+        Tbody
+        TR, TD, TH
+        Tfoot
+        TR, TD, TH
+    -->
+        <table>
+            <caption>Papulação das Unidades Federativas</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Estado</th> <!--Usa para um "titulo"-->
+                    <th scope="col" style="width: 50px;">População</th><!-- é scope col, pois o dado que ele fornece esta na mesma coluna-->
+                    <!-- o width eh com base na conta total q eu defini a tabela, ela estava em 500px, e aqui defini 50px, automaticamente o restanta fica 450px-->
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>São Paulo</td><!--Usa para um "dado ou informação"-->
+                    <td class="num">45 919 049</td>
+                </tr>
+                <tr>
+                    <td>Minas Gerais</td>
+                    <td class="num">21.168.791</td>
+                </tr>
+                <tr>
+                    <td>Rio de Janeiro</td>
+                    <td class="num">17.264.943</td>
+                </tr>
+                <tr>
+                    <td>Bahia</td>
+                    <td class="num">17.264.943</td>
+                </tr>
+                <tr>
+                    <td>Paraná</td>
+                    <td class="num">17.264.943</td>
+                </tr>
+                <tr>
+                    <td>Rio de Janeiro</td>
+                    <td class="num">17.264.943</td>
+                </tr>
+                <tr>
+                    <td>Rio Grande do Sul</td>
+                    <td class="num">17.264.943</td>
+                </tr>
+                <tr>
+                    <td>Rio de Janeiro</td>
+                    <td class="num">17.264.943</td>
+                </tr>
+                <tr>
+                    <td>Pará</td>
+                    <td class="num">17.264.943</td>
+                </tr>
+                <tr>
+                    <td>Rio de Janeiro</td>
+                    <td class="num">17.264.943</td>
+                </tr>
+                <tr>
+                    <td>Santa Catarina</td>
+                    <td class="num">17.264.943</td>
+                </tr>
+                <tr>
+                    <td>Rio de Janeiro</td>
+                    <td class="num">17.264.943</td>
+                </tr>
+                <tr>
+                    <td>Minas Gerais</td>
+                    <td class="num">21.168.791</td>
+                </tr>
+                <tr>
+                    <td>Rio de Janeiro</td>
+                    <td class="num">17.264.943</td>
+                </tr>
+                <tr>
+                    <td>Bahia</td>
+                    <td class="num">17.264.943</td>
+                </tr>
+                <tr>
+                    <td>Paraná</td>
+                    <td class="num">17.264.943</td>
+                </tr>
+                <tr>
+                    <td>Rio de Janeiro</td>
+                    <td class="num">17.264.943</td>
+                </tr>
+                <tr>
+                    <td>Rio Grande do Sul</td>
+                    <td class="num">17.264.943</td>
+                </tr>
+                <tr>
+                    <td>Rio de Janeiro</td>
+                    <td class="num">17.264.943</td>
+                </tr>
+                <tr>
+                    <td>Pará</td>
+                    <td class="num">17.264.943</td>
+                </tr>
+                <tr>
+                    <td>Rio de Janeiro</td>
+                    <td class="num">17.264.943</td>
+                </tr>
+                <tr>
+                    <td>Santa Catarina</td>
+                    <td class="num">17.264.943</td>
+                </tr>
+                <tr>
+                    <td>Rio de Janeiro</td>
+                    <td class="num">17.264.943</td>
+                </tr>
+                <tr>
+                    <td>Minas Gerais</td>
+                    <td class="num">21.168.791</td>
+                </tr>
+                <tr>
+                    <td>Rio de Janeiro</td>
+                    <td class="num">17.264.943</td>
+                </tr>
+                <tr>
+                    <td>Bahia</td>
+                    <td class="num">17.264.943</td>
+                </tr>
+                <tr>
+                    <td>Paraná</td>
+                    <td class="num">17.264.943</td>
+                </tr>
+                <tr>
+                    <td>Rio de Janeiro</td>
+                    <td class="num">17.264.943</td>
+                </tr>
+                <tr>
+                    <td>Rio Grande do Sul</td>
+                    <td class="num">17.264.943</td>
+                </tr>
+                <tr>
+                    <td>Rio de Janeiro</td>
+                    <td class="num">17.264.943</td>
+                </tr>
+                <tr>
+                    <td>Pará</td>
+                    <td class="num">17.264.943</td>
+                </tr>
+                <tr>
+                    <td>Rio de Janeiro</td>
+                    <td class="num">17.264.943</td>
+                </tr>
+                <tr>
+                    <td>Santa Catarina</td>
+                    <td class="num">17.264.943</td>
+                </tr>
+                <tr>
+                    <td>Rio de Janeiro</td>
+                    <td class="num">17.264.943</td>
+                </tr>
+                <tr>
+                    <td>Minas Gerais</td>
+                    <td class="num">21.168.791</td>
+                </tr>
+                <tr>
+                    <td>Rio de Janeiro</td>
+                    <td class="num">17.264.943</td>
+                </tr>
+                <tr>
+                    <td>Bahia</td>
+                    <td class="num">17.264.943</td>
+                </tr>
+                <tr>
+                    <td>Paraná</td>
+                    <td class="num">17.264.943</td>
+                </tr>
+                <tr>
+                    <td>Rio de Janeiro</td>
+                    <td class="num">17.264.943</td>
+                </tr>
+                <tr>
+                    <td>Rio Grande do Sul</td>
+                    <td class="num">17.264.943</td>
+                </tr>
+                <tr>
+                    <td>Rio de Janeiro</td>
+                    <td class="num">17.264.943</td>
+                </tr>
+                <tr>
+                    <td>Pará</td>
+                    <td class="num">17.264.943</td>
+                </tr>
+                <tr>
+                    <td>Rio de Janeiro</td>
+                    <td class="num">17.264.943</td>
+                </tr>
+                <tr>
+                    <td>Santa Catarina</td>
+                    <td class="num">17.264.943</td>
+                </tr>
+                <tr>
+                    <td>Rio de Janeiro</td>
+                    <td class="num">17.264.943</td>
+                </tr>
+                <tr>
+                    <td>Minas Gerais</td>
+                    <td class="num">21.168.791</td>
+                </tr>
+                <tr>
+                    <td>Rio de Janeiro</td>
+                    <td class="num">17.264.943</td>
+                </tr>
+                <tr>
+                    <td>Bahia</td>
+                    <td class="num">17.264.943</td>
+                </tr>
+                <tr>
+                    <td>Paraná</td>
+                    <td class="num">17.264.943</td>
+                </tr>
+                <tr>
+                    <td>Rio de Janeiro</td>
+                    <td class="num">17.264.943</td>
+                </tr>
+                <tr>
+                    <td>Rio Grande do Sul</td>
+                    <td class="num">17.264.943</td>
+                </tr>
+                <tr>
+                    <td>Rio de Janeiro</td>
+                    <td class="num">17.264.943</td>
+                </tr>
+                <tr>
+                    <td>Pará</td>
+                    <td class="num">17.264.943</td>
+                </tr>
+                <tr>
+                    <td>Rio de Janeiro</td>
+                    <td class="num">17.264.943</td>
+                </tr>
+                <tr>
+                    <td>Santa Catarina</td>
+                    <td class="num">17.264.943</td>
+                </tr>
+                <tr>
+                    <td>Rio de Janeiro</td>
+                    <td class="num">17.264.943</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th scope="row">Total de Habitantes</th> <!-- é scope row, pois o dado que ele fornece esta na mesma linha-->
+                    <td class="num"><strong>210.147.125</strong></td>
+                </tr>
+            </tfoot>
+        </table>
+</body>
+</html>
